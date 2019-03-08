@@ -1,0 +1,150 @@
+// COLORS
+$color-primary: #04D25A;
+$color-white: #fff;
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 62.5%; // 10px / 16px = 62.5%
+    font-family: 'Roboto', sans-serif;
+}
+
+// CONTAINER
+.container {
+    max-width: 120rem;
+    margin: 4rem;
+}
+
+// HEADER
+.header {
+    height: 40rem;
+    background-size: cover;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.3);
+    background-image: linear-gradient(to right, 
+        transparent 0%,
+        transparent 50%,
+        rgba($color-white, .9) 50%),
+    url('img/space-main.jpg');
+
+    display: flex;
+    flex: 0 0 100%;
+}
+
+// CONTENT
+.content {
+    display: flex;
+    flex: 0 0 50%;
+    flex-direction: column;
+
+    &--left {
+        padding: 3rem;
+        color: $color-white;
+  
+        justify-content: space-around;
+    }
+
+    &--right { }
+}
+
+// LOGO
+.logo {
+    height: 4rem;
+    width: 4rem;
+    fill: $color-primary;
+    cursor: pointer;
+}
+
+// HEADINGS
+.heading-primary {
+    font-size: 3rem;
+}
+
+.subheading {
+    font-size: .9rem;
+    line-height: 1.6;
+    border-left: 5px solid $color-primary;
+    padding-left: 1rem;
+}
+
+// FORM
+.form {
+    display: flex;
+    align-items: center;
+
+    &__input {
+        width: 50%;
+        padding: .7rem 1.4rem;
+        border-radius: 100px; 
+        border: none;
+        transition: all .2s;
+
+        &:focus {
+            outline: none;
+            width: 70%;
+        }
+    }
+
+    &__btn {
+        border: none;
+        margin-left: -2rem;
+        cursor: pointer; 
+        background-color: transparent;
+        margin-top: 5px;
+    }
+
+    &__icon {
+        height: 1rem;
+        width: 1rem;
+        fill: $color-primary;
+    }
+}
+
+// ICON BOX
+.icon-box {
+    &__icon {
+        height: 1rem;
+        width: 1rem;
+        fill: $color-primary;
+        cursor: pointer;
+
+        &:not(:last-child) {
+            margin-right: 1rem;
+        }
+    }
+}
+
+// CREDIT BOX
+.credit-box {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__icon {
+        margin-bottom: 2rem;
+        fill:  $color-primary;
+    }
+    
+    &__text {
+        width: 55%;
+        font-size: .9rem;
+        line-height: 1.4rem;
+        border-left: 5px solid $color-primary;
+        padding-left: 1rem;
+    }
+
+    &__link:link,
+    &__link:visited {
+        color: $color-primary;
+        text-decoration: none;
+    }
+}
